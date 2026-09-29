@@ -41,7 +41,7 @@ img:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #dce6df;
+    background-color: #7ea88c;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
