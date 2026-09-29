@@ -1,1 +1,5 @@
-
+.body-map {
+background-color: #111;
+overflow: hidden;
+margin: 0;
+}
