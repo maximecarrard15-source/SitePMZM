@@ -1,5 +1,5 @@
 .fondecran {
-    background-image: href:"fonddecran.gif";
+    background-image: url("fonddecran.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
