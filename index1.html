@@ -1,4 +1,4 @@
-ar<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -11,6 +11,7 @@ ar<!DOCTYPE html>
         <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Ops+One&display=swap" rel="stylesheet">
     </head>
+    <body>
     <header class="site-header">
         <h1 class="title">La Guerre de l'invisible</h1>
 
@@ -21,7 +22,7 @@ ar<!DOCTYPE html>
                 <li><a href="indexDifference.html">Differents types</a></li>
             </ul>
         </nav>
-        <img href="Hacker_logo.jpg" alt="Hacker rouge" class="flag">
+        <img src="Hacker_logo.jpg" alt="Hacker rouge" class="flag">
     </header>
     <body>
         <div id="slide-transition"></div>
@@ -30,41 +31,11 @@ ar<!DOCTYPE html>
         <p>Avant de revenir vivre en France, j'ai passé 4 ans aux <span class="rouge">E</span><span class="bleu">U</span><span class="rouge">A</span>. <br>Fort de cette experience, j'ai créé ce site afin de permettre à<br>des gens ne pouvant pas voyager de découvrir les '<span class="rouge">St</span><span class="bleu">at</span><span class="rouge">es</span>'.</p>
         <h2>Tout d'abord, les États:</h2>
         <div id="flag-fullscreen"></div>
-    </body>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slide = document.getElementById("slide-transition");
-
-  if (sessionStorage.getItem("slideToHome")) {
-    slide.classList.add("active");
-
-    setTimeout(() => {
-      slide.classList.remove("active");
-      sessionStorage.removeItem("slideToHome");
-    }, 400);
-  }
-});
-</script>
-    <script>
-document.querySelectorAll('.state-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const img = this.querySelector('img').src;
-    const url = this.href;
-    sessionStorage.setItem("flagZoom", img);
-    const fullscreen = document.getElementById('flag-fullscreen');
-    fullscreen.style.backgroundImage = `url(${img})`;
-    fullscreen.classList.add('active');
-    setTimeout(() => {
-      window.location.href = url;
-    }, 600);
-  });
-});
-    </script>
     <footer>
         <button class="btn-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
             <span class="material-symbols-outlined">arrow_upward</span>
         </button>
 
     </footer>
+    </body>
 </html>
