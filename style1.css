@@ -1,5 +1,8 @@
 .fondecran {
-    background-image: "fonddecran.gif
+    background-image: src:"fonddecran.gif";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
