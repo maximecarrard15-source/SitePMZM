@@ -1,1 +1,7 @@
-
+.iframe {
+  width: 1870;
+  height: 920;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000;
+}
