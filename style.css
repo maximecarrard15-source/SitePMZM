@@ -358,7 +358,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 .text-content .eyebrow { color: rgb(0 0 0 / 60%); }
 .text-content .eyebrow span { background: #0a0c0e; box-shadow: none; }
 .text-content h1 { margin: 0; font-size: clamp(56px, 7vw, 102px); font-weight: 600; letter-spacing: -.075em; line-height: .94; }
-.text-lead { max-width: 730px; margin: 55px 0; font-size: clamp(23px, 3vw, 37px); font-weight: 500; letter-spacing: -.04em; line-height: 1.3; }
+.text-lead { max-width: 1730px; margin: 55px 0; font-size: clamp(23px, 3vw, 37px); font-weight: 500; letter-spacing: -.04em; line-height: 1.3; }
 .text-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; padding-top: 38px; border-top: 1px solid rgb(0 0 0 / 20%); }
 .text-columns p { margin: 0; color: rgb(0 0 0 / 67%); font-size: 13px; line-height: 1.8; }
 .text-columns strong { display: inline-block; margin-bottom: 10px; color: #0a0c0e; font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .12em; }
