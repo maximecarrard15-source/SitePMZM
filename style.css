@@ -3,7 +3,7 @@
   background: #090b0e;
   font-family: "Manrope", sans-serif;
   font-synthesis: none;
-  --lime: #d8ff3e;
+  --black: #000000;
   --red: #ff5e52;
   --grey: #9aa3ad;
 }
@@ -350,8 +350,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
   display: grid;
   grid-template-columns: 25vw fr;
   padding-top: 82px;
-  background: #0d1014;
-  color: rgb(255 255 255);
+  background: var(--black);
+  color: #FFFFFF;
 }
 .text-aside { display: flex; flex-direction: column; justify-content: space-between; padding: 55px 4vw 70px; border-right: 1px solid rgb(0 0 0 / 20%); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .1em; line-height: 1.6; }
 .text-content { max-width: 1050px; padding: 90px 8vw 80px; }
