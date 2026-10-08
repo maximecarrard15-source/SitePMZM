@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/carte.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/types.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/white-hat.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/grey-hat.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/black-hat.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://invisibleshackeurs.vercel.app/index.html</loc>
+       <lastmod>2026-10-08T06:51:56+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+</urlset>
