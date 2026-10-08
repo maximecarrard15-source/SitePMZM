@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Différents types — La Guerre de l'invisible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./"><svg viewBox="0 0 32 32"><path d="M16 2 28 9v14l-12 7L4 23V9l12-7Z"/><path d="m10 13 3 3-3 3M16 20h6"/></svg><span>INVISIBLES<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="main-nav"><a href="./">Accueil</a><a href="./carte.html">Carte des attaques</a><a class="active" href="./types.html">À propos</a></nav>
+      <span class="header-note">Projet de sensibilisation</span>
+    </header>
+    <main class="text-page">
+      <article class="text-content">
+        <p class="eyebrow"><span></span>QUI NOUS SOMMES</p>
+        <h1>L'équipe</h1>
+        <p class="text-lead">La guerre de l’invisible est née de l’envie commune de chercher ce qui cache derrière le terme très général de « hackeur » et du « hacking ». Cela nous a d’autant plus plût que notre site internet est avant tout un projet de NSI, donc d’informatique, et relier ce projet à la figure presque mystique du « hackeur » invisible, inattaquable et surpuissant dans le cyberespace nous semblait donc un excellent choix.</p>
+      </article>
+    </main>
+    <div class="carousel" aria-label="Profils de hackers">
+          <div class="cards-track">
+            <div class="hat-card active">
+              <span class="card-number">01 — Coder</span>
+              <div class="hat-visual">
+                <svg viewBox="0 0 160 160" aria-hidden="true">
+                  <path d="M80 17 132 37v39c0 33-20 56-52 69-32-13-52-36-52-69V37L80 17Z" />
+                  <path d="m57 79 15 15 33-36" />
+                </svg>
+              </div>
+              <span class="card-label">Maxime Carrard</span>
+              <h3>Le geek</h3>
+              <p>Il pense avoir du temps alors qu'il n'en a pas assez.</p>
+            </div>
+
+            <div class="hat-card grey">
+              <span class="card-number">02 — Designer</span>
+              <div class="hat-visual">
+                <svg viewBox="0 0 160 160" aria-hidden="true">
+                  <path d="M46 28H29v17M114 28h17v17M46 132H29v-17M114 132h17v-17" />
+                  <circle cx="80" cy="80" r="34" />
+                  <path d="M48 80h64M80 48c11 10 17 21 17 32s-6 22-17 32c-11-10-17-21-17-32s6-22 17-32Z" />
+                </svg>
+              </div>
+              <span class="card-label">Paul Mignot</span>
+              <h3>Au crayon, et à la gomme</h3>
+              <p>Plus d'idées créatives sortent de sa tête que de celles de ses coéquipiers.</p>
+            </div>
+
+            <div class="hat-card black">
+              <span class="card-number">03 — Embedder</span>
+              <div class="hat-visual">
+                <svg viewBox="0 0 160 160" aria-hidden="true">
+                  <path d="M42 67c3-28 15-44 38-48 23 4 35 20 38 48" />
+                  <path d="M24 69h112l-14 22H38L24 69Z" />
+                  <path d="M47 98c7 25 59 25 66 0M51 102c17-10 41-10 58 0M58 95v13M102 95v13" />
+                </svg>
+              </div>
+              <span class="card-label">Zéphyr Frottier de Bagneux</span>
+              <h3>L'expert pour embed des pages</h3>
+              <p>Prend plus d'heure à embed un site que à réviser ses cours.</p>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
