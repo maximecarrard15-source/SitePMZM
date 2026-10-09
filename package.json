@@ -22,7 +22,5 @@
     "url": "https://github.com/maximecarrard15-source/SitePMZM/issues"
   },
   "homepage": "https://github.com/maximecarrard15-source/SitePMZM#readme",
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1"
-  }
+  "dependencies": {}
 }
