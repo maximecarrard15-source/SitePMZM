@@ -1,0 +1,28 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "La Guerre de l'invisible - Site pédagogique sur le hacking et la cybersécurité",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximecarrard15-source/SitePMZM.git"
+  },
+  "keywords": [
+    "cybersecurity",
+    "hacking",
+    "education"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximecarrard15-source/SitePMZM/issues"
+  },
+  "homepage": "https://github.com/maximecarrard15-source/SitePMZM#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
