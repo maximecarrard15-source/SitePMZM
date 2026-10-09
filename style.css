@@ -444,5 +444,5 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 }
 
 .chapeaublanc {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 400px;
+  max-height: 400px;
