@@ -7,6 +7,7 @@ Choses à améliorer :
 •	Il faut rajouter la petite introduction des quatre personnes
 •	Il faut changer les logos pour chaque personne 
 •	Il faut changer les noms et les descriptions pour chaque personne.
+•	Il faut rajouter la dédicace aux deux IA à la fin.
 
 L'équipe
 
@@ -17,7 +18,7 @@ La guerre de l’invisible est née de l’envie commune de chercher ce qui se c
 •	( Format des vignettes: Nom (en petit en vert)
   o	Métier (en grand en blanc)
   o	Détails (en petit en gris/blanc) )
-•	Paul Mignot 
+• Paul Mignot 
   o	Designer
   o	Il est chargé d’imaginer la conception graphique des pages, de rechercher des informations sur les autres sites web et de rédiger les contenus des pages.
 •	Maxime Carrard 
@@ -30,5 +31,6 @@ La guerre de l’invisible est née de l’envie commune de chercher ce qui se c
   o	Team Builder
   o	Il est chargé de l’animation du groupe, pour renforcer l’esprit d’équipe, et peut aussi être considéré comme un boute-en-train.
 
+(après les quatre vignettes, d'une taille un peu plus grande que celle pour les descriptions des personnes)
 Claude d’Anthropic, qui nous a aidé à rédiger le contenu des pages du site, et uniquement le contenu bien sûr (pas le code), après avoir reçu des instructions claires sur les informations à mettre, le style adapté et les sources sur lequelles se baser. Son travail a systématiquement été relu attentivement et vérifié.
 ChatGPT d’OpenAI, qui nous a aidé à créer les petites illustrations que l’on retrouve partout sur le site, après avoir reçu des instructions claires sur ce que l’on souhaitait avoir.
