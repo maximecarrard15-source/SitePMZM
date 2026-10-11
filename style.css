@@ -312,15 +312,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
   overflow: hidden;
   border-bottom: 1px solid rgb(255 255 255 / 9%);
 }
-.detail-hero::before {
-  content: "";
-  position: absolute;
-  right: 8%;
-  width: 480px;
-  height: 480px;
-  border: 1px solid color-mix(in srgb, var(--accent) 17%, transparent);
-  border-radius: 50%;
-}
+
 .back-link {
   position: absolute;
   top: 40px;
