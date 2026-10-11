@@ -301,7 +301,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 
 .detail-page { min-height: 100vh; padding-top: 82px; background: #0b0e12; }
 .detail-page.grey-page { --accent: var(--grey); }
-.detail-page.black-page { --accent: var(--red); }
+.detail-page.black-page { --accent: #a78bfa; }
 .detail-page.white-page { --accent: var(--lime); }
 .detail-hero {
   position: relative;
