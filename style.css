@@ -225,6 +225,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 .hat-card.grey { --accent: var(--grey); }
 .hat-card.black { --accent: var(--red); }
 .hat-card.active { opacity: 1; transform: scale(1); border-color: rgb(255 255 255 / 18%); }
+.hat-card.red { --accent: var(--red); }
 .hat-card::after {
   content: "";
   position: absolute;
