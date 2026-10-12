@@ -431,10 +431,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 
 .iframe {
   position: fixed;
-  top: 82px;
+  top: 72px;
   left: 0;
   width: 100%;
-  height: calc(100dvh - 82px);
+  height: calc(100dvh - 72px);
   border: none;
   margin: 0;
   padding: 0;
