@@ -1,13 +1,9 @@
-/* ===== STYLES COMMUNS POUR TOUTES LES PAGES HAT ===== */
-
-/* Conteneur principal pour la page */
 .hat-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 4vw;
 }
 
-/* Section Hero avec titre et logo */
 .hat-hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -59,7 +55,6 @@
   text-transform: uppercase;
 }
 
-/* Logo */
 .hat-logo {
   display: flex;
   flex-direction: column;
@@ -89,14 +84,12 @@
   text-transform: uppercase;
 }
 
-/* Séparateur entre sections */
 .hat-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
   margin: 40px 0;
 }
 
-/* Section à 2 colonnes */
 .hat-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,7 +107,6 @@
   border-right: none;
 }
 
-/* Sections dans les colonnes */
 .column-section {
   margin-bottom: 50px;
 }
@@ -165,7 +157,6 @@
   margin-bottom: 0;
 }
 
-/* Exemple concret en bas */
 .hat-example {
   padding: 50px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -199,9 +190,6 @@
   margin: 0;
 }
 
-/* ===== COULEURS SPÉCIFIQUES PAR TYPE ===== */
-
-/* White Hat - Vert */
 .white-page .hat-eyebrow,
 .white-page .hat-definition strong,
 .white-page .column-section-title::before,
@@ -212,7 +200,6 @@
   filter: drop-shadow(0 0 30px rgba(50, 205, 50, 0.3));
 }
 
-/* Grey Hat - Gris */
 .grey-page .hat-eyebrow,
 .grey-page .hat-definition strong,
 .grey-page .column-section-title::before,
@@ -223,7 +210,6 @@
   filter: drop-shadow(0 0 30px rgba(154, 163, 173, 0.3));
 }
 
-/* Black Hat - Violet */
 .black-page .hat-eyebrow,
 .black-page .hat-definition strong,
 .black-page .column-section-title::before,
@@ -234,7 +220,6 @@
   filter: drop-shadow(0 0 30px rgba(167, 139, 250, 0.3));
 }
 
-/* Red Hat - Rouge */
 .detail-page.red-page .hat-eyebrow,
 .detail-page.red-page .hat-definition strong,
 .detail-page.red-page .column-section-title::before,
@@ -245,7 +230,6 @@
   filter: drop-shadow(0 0 30px rgba(255, 94, 82, 0.3));
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .hat-hero {
     grid-template-columns: 1fr;
