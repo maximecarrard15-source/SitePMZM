@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Hat — La Guerre de l'Invisible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styleblack.css" />
+
+  </head>
+  <body class="detail-page black-page">
+    <header class="site-header">
+      <a class="brand" href="./"><svg viewBox="0 0 32 32"><path d="M16 2 28 9v14l-12 7L4 23V9l12-7Z"/><path d="m10 13 3 3-3 3M16 20h6"/></svg><span>INVISIBLES<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="main-nav"><a href="./">Accueil</a><a href="./carte.html">Carte des attaques</a><a href="./quiz.html">Quiz</a><a href="./types.html">À propos</a></nav>
+      <span class="header-note">Projet de sensibilisation</span>
+    </header>
+    
+    <main>
+      <!-- Bandeau horizontal -->
+      <div class="page-banner" aria-hidden="true"></div>
+      
+      <div class="black-hat-container">
+        <!-- Section Hero avec titre et logo -->
+        <section class="black-hat-hero">
+          <a class="back-link" href="./">↩ Retour à l'exploration</a>
+          
+          <div class="black-hat-title-section">
+            <span class="black-hat-eyebrow">03 / PROFIL</span>
+            <h1 class="black-hat-title">Black Hat</h1>
+            <p class="black-hat-definition">
+              <strong>Définition :</strong><br>
+              Le black hat contourne les règles dans un but nuisible ou lucratif. 
+              Il exploite les vulnérabilités des systèmes sans autorisation, 
+              causant des dommages financiers, des vols de données ou des perturbations 
+              de service pour son propre bénéfice ou par malveillance.
+            </p>
+          </div>
+          
+          <div class="black-hat-logo">
+            <div class="logo-circle">
+              <img src="./BlackHat.png" alt="Black Hat - Chapeau noir symbolisant les hackeurs malveillants" />
+            </div>
+            <span class="logo-caption">HACKER MALVEILLANT / CYBERCRIMINEL</span>
+          </div>
+        </section>
+        
+        <div class="black-hat-divider"></div>
+        
+        <!-- Section à 2 colonnes -->
+        <section class="black-hat-columns">
+          <!-- Colonne de gauche -->
+          <div class="black-hat-column">
+            <article class="column-section">
+              <h2 class="column-section-title">Stéréotype</h2>
+              <p>
+                Représentés comme des criminels en hoodie dans l'ombre, les Black Hats 
+                sont souvent perçus comme des génies solitaires manipulant des écrans 
+                verts. La réalité est plus diverse : ce sont des individus ou des 
+                organisations structurées, parfois très professionnelles.
+              </p>
+            </article>
+            
+            <article class="column-section">
+              <h2 class="column-section-title">Salaire</h2>
+              <p>
+                Leurs revenus sont illégaux et variables. Un script kiddie peut gagner 
+                quelques centaines d'euros, tandis qu'un groupe organisé peut générer 
+                des millions via le ransomware, le vol de données bancaires ou la 
+                revente d'informations sur le dark web. Aucun salaire officiel.
+              </p>
+            </article>
+            
+            <article class="column-section">
+              <h2 class="column-section-title">Motivation</h2>
+              <p>
+                L'appât du gain financier est la motivation principale. Certains agissent 
+                par idéologie (hacktivisme), d'autres par vengeance ou simplement pour 
+                le défi technique. Le manque de remords et l'anonymat relatif du cyberespace 
+                facilitent leurs actions.
+              </p>
+            </article>
+          </div>
+          
+          <!-- Colonne de droite -->
+          <div class="black-hat-column">
+            <article class="column-section">
+              <h2 class="column-section-title">Légalité</h2>
+              <p>
+                Leurs activités sont strictement illégales. L'accès non autorisé à un 
+                système informatique, la modification de données ou la perturbation 
+                de services sont des infractions pénales graves, punies par la loi dans 
+                tous les pays. Aucune circonstance n'atténue cette illégalité.
+              </p>
+            </article>
+            
+            <article class="column-section">
+              <h2 class="column-section-title">Méthode et outils typiques</h2>
+              <ul>
+                <li><strong>Exploitation de vulnérabilités zero-day</strong> (non patchées)</li>
+                <li><strong>Attaques par phishing</strong> et ingénierie sociale sophistiquée</li>
+                <li><strong>Déploiement de ransomwares</strong> pour extorquer des entreprises</li>
+                <li><strong>Création de botnets</strong> pour des attaques DDoS ou l'envoi de spam</li>
+                <li><strong>Vol de données personnelles</strong> pour la revente ou le chantage</li>
+                <li><strong>Utilisation de malware</strong> (chevaux de Troie, spyware, rootkits)</li>
+                <li><strong>Attaques par force brute</strong> pour deviner les mots de passe</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        
+        <div class="black-hat-divider"></div>
+        
+        <!-- Exemple concret -->
+        <section class="black-hat-example">
+          <h2 class="black-hat-example-title">Exemple concret :</h2>
+          <p>
+            Un groupe de Black Hats identifie une vulnérabilité dans le système de 
+            paiement d'une grande entreprise de e-commerce. Ils développent un exploit 
+            pour voler les informations de carte bancaire des clients. Pendant plusieurs 
+            mois, ils siphonnent discrètement les données avant d'être détectés. 
+            L'entreprise subit des pertes financières importantes, une atteinte à sa 
+            réputation, et doit investir massivement pour renforcer sa sécurité et 
+            indemniser ses clients.
+          </p>
+        </section>
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <strong>LA GUERRE DE L'INVISIBLE</strong>
+        <span>Comprendre pour mieux se protéger.</span>
+      </div>
+      <nav>
+        <a href="./">Accueil</a>
+        <a href="./carte.html">Carte des attaques</a>
+        <a href="./quiz.html">Quiz</a>
+        <a href="./types.html">À propos</a>
+      </nav>
+      <p>Site pédagogique consacré à la culture et à la sécurité numériques.</p>
+    </footer>
+    
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
