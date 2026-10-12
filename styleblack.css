@@ -1,14 +1,14 @@
-/* ===== STYLES SPÉCIFIQUES POUR BLACK-HAT ===== */
+/* ===== STYLES COMMUNS POUR TOUTES LES PAGES HAT ===== */
 
 /* Conteneur principal pour la page */
-.black-hat-container {
+.hat-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 4vw;
 }
 
 /* Section Hero avec titre et logo */
-.black-hat-hero {
+.hat-hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
@@ -16,28 +16,26 @@
   margin-bottom: 60px;
 }
 
-.black-hat-eyebrow {
+.hat-eyebrow {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  color: #a78bfa;
   font-family: "DM Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.black-hat-eyebrow::before {
+.hat-eyebrow::before {
   content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 12px #a78bfa;
+  box-shadow: 0 0 12px currentColor;
 }
 
-.black-hat-title {
+.hat-title {
   margin: 0 0 25px;
   font-size: clamp(56px, 8vw, 120px);
   font-weight: 700;
@@ -46,7 +44,7 @@
   color: #f4f5f0;
 }
 
-.black-hat-definition {
+.hat-definition {
   max-width: 650px;
   margin: 0;
   color: #a4a8a7;
@@ -54,16 +52,15 @@
   line-height: 1.8;
 }
 
-.black-hat-definition strong {
-  color: #a78bfa;
+.hat-definition strong {
   font-family: "DM Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* Logo circulaire - SANS CERCLE */
-.black-hat-logo {
+/* Logo */
+.hat-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +79,6 @@
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  filter: drop-shadow(0 0 30px rgba(167, 139, 250, 0.3));
 }
 
 .logo-caption {
@@ -94,14 +90,14 @@
 }
 
 /* Séparateur entre sections */
-.black-hat-divider {
+.hat-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
   margin: 40px 0;
 }
 
 /* Section à 2 colonnes */
-.black-hat-columns {
+.hat-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -109,12 +105,12 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.black-hat-column {
+.hat-column {
   padding: 40px;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.black-hat-column:last-child {
+.hat-column:last-child {
   border-right: none;
 }
 
@@ -143,8 +139,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 10px #a78bfa;
+  box-shadow: 0 0 10px currentColor;
 }
 
 .column-section p {
@@ -171,44 +166,88 @@
 }
 
 /* Exemple concret en bas */
-.black-hat-example {
+.hat-example {
   padding: 50px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0;
 }
 
-.black-hat-example-title {
+.hat-example-title {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.04em;
-  color: #a78bfa;
   margin-bottom: 25px;
   font-family: "DM Mono", monospace;
   letter-spacing: 0.05em;
 }
 
-.black-hat-example-title::before {
+.hat-example-title::before {
   content: "";
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 15px #a78bfa;
+  box-shadow: 0 0 15px currentColor;
 }
 
-.black-hat-example p {
+.hat-example p {
   color: #9ba0a4;
   font-size: 15px;
   line-height: 1.9;
   margin: 0;
 }
 
+/* ===== COULEURS SPÉCIFIQUES PAR TYPE ===== */
+
+/* White Hat - Vert */
+.white-page .hat-eyebrow,
+.white-page .hat-definition strong,
+.white-page .column-section-title::before,
+.white-page .hat-example-title,
+.white-page .hat-example-title::before,
+.white-page .logo-circle img {
+  color: var(--lime);
+  filter: drop-shadow(0 0 30px rgba(50, 205, 50, 0.3));
+}
+
+/* Grey Hat - Gris */
+.grey-page .hat-eyebrow,
+.grey-page .hat-definition strong,
+.grey-page .column-section-title::before,
+.grey-page .hat-example-title,
+.grey-page .hat-example-title::before,
+.grey-page .logo-circle img {
+  color: var(--grey);
+  filter: drop-shadow(0 0 30px rgba(154, 163, 173, 0.3));
+}
+
+/* Black Hat - Violet */
+.black-page .hat-eyebrow,
+.black-page .hat-definition strong,
+.black-page .column-section-title::before,
+.black-page .hat-example-title,
+.black-page .hat-example-title::before,
+.black-page .logo-circle img {
+  color: #a78bfa;
+  filter: drop-shadow(0 0 30px rgba(167, 139, 250, 0.3));
+}
+
+/* Red Hat - Rouge */
+.detail-page.red-page .hat-eyebrow,
+.detail-page.red-page .hat-definition strong,
+.detail-page.red-page .column-section-title::before,
+.detail-page.red-page .hat-example-title,
+.detail-page.red-page .hat-example-title::before,
+.detail-page.red-page .logo-circle img {
+  color: var(--red);
+  filter: drop-shadow(0 0 30px rgba(255, 94, 82, 0.3));
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
-  .black-hat-hero {
+  .hat-hero {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -218,26 +257,26 @@
     height: 220px;
   }
   
-  .black-hat-columns {
+  .hat-columns {
     grid-template-columns: 1fr;
   }
   
-  .black-hat-column {
+  .hat-column {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
   
-  .black-hat-column:last-child {
+  .hat-column:last-child {
     border-bottom: none;
   }
 }
 
 @media (max-width: 600px) {
-  .black-hat-container {
+  .hat-container {
     padding: 30px 20px;
   }
   
-  .black-hat-hero {
+  .hat-hero {
     gap: 30px;
   }
   
@@ -246,19 +285,19 @@
     height: 180px;
   }
   
-  .black-hat-columns {
+  .hat-columns {
     gap: 0;
   }
   
-  .black-hat-column {
+  .hat-column {
     padding: 30px 20px;
   }
   
-  .black-hat-example {
+  .hat-example {
     padding: 30px 20px;
   }
   
-  .black-hat-example-title {
+  .hat-example-title {
     font-size: 18px;
   }
 }
