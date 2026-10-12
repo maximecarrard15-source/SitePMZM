@@ -428,12 +428,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
 .iframe {
+  position: fixed;
+  top: 82px;
+  left: 0;
   width: 100%;
-  height: 1000%;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: #000;
+  height: calc(100dvh - 82px);
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .chapeaublanc {
