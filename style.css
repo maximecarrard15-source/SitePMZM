@@ -443,7 +443,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
 .chapeaublanc {
   max-width: 400px;
   max-height: 400px;
-/* ===== STYLES SPÉCIFIQUES POUR BLACK-HAT-PREVIEW ===== */
+
+/* ===== STYLES SPÉCIFIQUES POUR BLACK-HAT ===== */
 
 /* Conteneur principal pour la page */
 .black-hat-container {
@@ -507,7 +508,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
   text-transform: uppercase;
 }
 
-/* Logo circulaire - SANS CERCLE comme demandé */
+/* Logo circulaire - SANS CERCLE */
 .black-hat-logo {
   display: flex;
   flex-direction: column;
@@ -658,12 +659,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
     gap: 40px;
   }
   
-  .black-hat-hero::after {
-    width: 300px;
-    height: 300px;
-    transform: translate(10%, -10%);
-  }
-  
   .logo-circle {
     width: 220px;
     height: 220px;
@@ -690,10 +685,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--lime); outline-
   
   .black-hat-hero {
     gap: 30px;
-  }
-  
-  .black-hat-hero::after {
-    display: none;
   }
   
   .logo-circle {
