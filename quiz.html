@@ -19,6 +19,7 @@
             <a href="./">Accueil</a>
             <a href="./carte.html">Carte des attaques</a>
 			<a class="active" href="./quiz.html">Quiz</a>
+            <a href="./admin.html">Admin</a>
           </nav>
           <span class="header-note">Projet de sensibilisation</span>
         </header>
@@ -253,6 +254,9 @@
               document.getElementById("resultat").innerHTML =
                 "<h2>Score : " + score + " / 30</h2>" +
                 "<p>" + message + "</p>";
+              
+              // Sauvegarder le résultat dans localStorage
+              saveResult(score);
             }
 
 
@@ -262,6 +266,15 @@
 
             }
 
+          <script>
+            function saveResult(score) {
+              let results = JSON.parse(localStorage.getItem('quizResults') || '[]');
+              results.push({
+                score: score,
+                timestamp: new Date().toISOString()
+              });
+              localStorage.setItem('quizResults', JSON.stringify(results));
+            }
           </script>
 	
   

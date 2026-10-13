@@ -1,0 +1,232 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <title>Admin - Résultats Quiz</title>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="./" aria-label="Invisibles, accueil">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M16 2 28 9v14l-12 7L4 23V9l12-7Z"></path>
+                <path d="m10 13 3 3-3 3M16 20h6"></path>
+            </svg>
+            <span>INVISIBLES<span class="brand-dot">.</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="./">Accueil</a>
+            <a href="./carte.html">Carte des attaques</a>
+            <a href="./quiz.html">Quiz</a>
+            <a class="active" href="./admin.html">Admin</a>
+        </nav>
+        <span class="header-note">Projet de sensibilisation</span>
+    </header>
+
+    <main class="admin-container">
+        <h1>Tableau de bord Admin - Résultats Quiz</h1>
+        
+        <div class="admin-stats">
+            <div class="stat-card">
+                <h3>Total des participants</h3>
+                <p id="total-participants">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Score moyen</h3>
+                <p id="average-score">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Meilleur score</h3>
+                <p id="best-score">0</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2>Répartition des scores</h2>
+            <canvas id="score-chart"></canvas>
+        </div>
+
+        <div class="results-table">
+            <h2>Derniers résultats</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Score</th>
+                        <th>Catégorie</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button class="btn-clear" onclick="clearAllData()">Effacer toutes les données</button>
+            <button class="btn-export" onclick="exportData()">Exporter en JSON</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Charger les données au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadResults();
+            loadStats();
+            loadChart();
+        });
+
+        function getResults() {
+            const results = localStorage.getItem('quizResults');
+            return results ? JSON.parse(results) : [];
+        }
+
+        function saveResults(results) {
+            localStorage.setItem('quizResults', JSON.stringify(results));
+        }
+
+        function loadResults() {
+            const results = getResults();
+            const tableBody = document.getElementById('results-body');
+            
+            if (results.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5">Aucun résultat enregistré</td></tr>';
+                return;
+            }
+
+            tableBody.innerHTML = '';
+            results.slice().reverse().forEach((result, index) => {
+                const row = document.createElement('tr');
+                const actualIndex = results.length - 1 - index;
+                
+                row.innerHTML = `
+                    <td>${actualIndex + 1}</td>
+                    <td>${result.score} / 30</td>
+                    <td>${getCategory(result.score)}</td>
+                    <td>${new Date(result.timestamp).toLocaleString('fr-FR')}</td>
+                    <td><button class="btn-delete" onclick="deleteResult(${actualIndex})">Supprimer</button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function getCategory(score) {
+            if (score <= 7) return "Non dangereux";
+            if (score <= 15) return "Faible danger";
+            if (score <= 22) return "Danger suspect";
+            return "Très dangereux";
+        }
+
+        function loadStats() {
+            const results = getResults();
+            
+            if (results.length === 0) {
+                document.getElementById('total-participants').textContent = '0';
+                document.getElementById('average-score').textContent = '0';
+                document.getElementById('best-score').textContent = '0';
+                return;
+            }
+
+            const total = results.length;
+            const sum = results.reduce((acc, result) => acc + result.score, 0);
+            const average = (sum / total).toFixed(1);
+            const best = Math.max(...results.map(r => r.score));
+
+            document.getElementById('total-participants').textContent = total;
+            document.getElementById('average-score').textContent = average;
+            document.getElementById('best-score').textContent = best;
+        }
+
+        function loadChart() {
+            const results = getResults();
+            
+            if (results.length === 0) {
+                document.querySelector('.chart-container').style.display = 'none';
+                return;
+            }
+
+            const categories = {
+                'Non dangereux': 0,
+                'Faible danger': 0,
+                'Danger suspect': 0,
+                'Très dangereux': 0
+            };
+
+            results.forEach(result => {
+                const category = getCategory(result.score);
+                categories[category]++;
+            });
+
+            const ctx = document.getElementById('score-chart').getContext('2d');
+            
+            if (window.scoreChart) {
+                window.scoreChart.destroy();
+            }
+
+            window.scoreChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(categories),
+                    datasets: [{
+                        data: Object.values(categories),
+                        backgroundColor: [
+                            '#4CAF50',
+                            '#8BC34A',
+                            '#FF9800',
+                            '#F44336'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        function deleteResult(index) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer ce résultat ?')) {
+                const results = getResults();
+                results.splice(index, 1);
+                saveResults(results);
+                loadResults();
+                loadStats();
+                loadChart();
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('Êtes-vous sûr de vouloir effacer TOUTES les données ? Cette action est irréversible.')) {
+                localStorage.removeItem('quizResults');
+                loadResults();
+                loadStats();
+                loadChart();
+            }
+        }
+
+        function exportData() {
+            const results = getResults();
+            const dataStr = JSON.stringify(results, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'quiz-results-' + new Date().toISOString().split('T')[0] + '.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
