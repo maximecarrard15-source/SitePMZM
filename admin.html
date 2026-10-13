@@ -52,14 +52,14 @@
         </div>
 
         <div class="results-table">
-            <h2>Derniers résultats</h2>
+            <h2>Tous les résultats</h2>
             <table id="results-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>#</th>
                         <th>Score</th>
                         <th>Catégorie</th>
-                        <th>Date</th>
+                        <th>Date et heure</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -108,6 +108,7 @@
                 const data = snapshot.val();
                 
                 if (data) {
+                    // Parcourir tous les résultats
                     Object.keys(data).forEach(key => {
                         allResults.push({
                             id: key,
@@ -115,6 +116,9 @@
                             timestamp: data[key].timestamp
                         });
                     });
+                    
+                    // Trier par date (du plus ancien au plus récent)
+                    allResults.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
                 }
                 
                 // Mettre à jour l'interface
@@ -133,12 +137,13 @@
             }
 
             tableBody.innerHTML = '';
-            allResults.slice().reverse().forEach((result, index) => {
-                const actualIndex = allResults.length - 1 - index;
+            
+            // Afficher TOUS les résultats dans l'ordre chronologique
+            allResults.forEach((result, index) => {
                 const row = document.createElement('tr');
                 
                 row.innerHTML = `
-                    <td>${actualIndex + 1}</td>
+                    <td>${index + 1}</td>
                     <td>${result.score} / 30</td>
                     <td>${getCategory(result.score)}</td>
                     <td>${new Date(result.timestamp).toLocaleString('fr-FR')}</td>
@@ -178,6 +183,8 @@
                 document.querySelector('.chart-container').style.display = 'none';
                 return;
             }
+
+            document.querySelector('.chart-container').style.display = 'block';
 
             const categories = {
                 'Non dangereux': 0,
