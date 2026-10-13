@@ -266,7 +266,6 @@
 
             }
 
-          <script>
             function saveResult(score) {
               let results = JSON.parse(localStorage.getItem('quizResults') || '[]');
               results.push({
@@ -275,6 +274,7 @@
               });
               localStorage.setItem('quizResults', JSON.stringify(results));
             }
+
           </script>
 	
   
