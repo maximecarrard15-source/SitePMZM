@@ -2,6 +2,8 @@
     <meta charset="utf-8">
         <link rel="stylesheet" href="quiz-style.css">
 		<link rel="stylesheet" href="style.css">
+		<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
   </head>
   <body>
         <header class="site-header">
@@ -266,13 +268,29 @@
 
             }
 
+            // Configuration Firebase
+            const firebaseConfig = {
+              apiKey: "AIzaSyDhfcjt89khZjia9cZ9kVd5lOmFhUCBABY",
+              authDomain: "sitepmzm-quiz.firebaseapp.com",
+              databaseURL: "https://sitepmzm-quiz-default-rtdb.firebaseio.com",
+              projectId: "sitepmzm-quiz",
+              storageBucket: "sitepmzm-quiz.firebasestorage.app",
+              messagingSenderId: "983570150537",
+              appId: "1:983570150537:web:03251c16e13d0514540258"
+            };
+
+            // Initialiser Firebase
+            if (!firebase.apps.length) {
+              firebase.initializeApp(firebaseConfig);
+            }
+            const database = firebase.database();
+
             function saveResult(score) {
-              let results = JSON.parse(localStorage.getItem('quizResults') || '[]');
-              results.push({
+              const resultsRef = database.ref('quizResults');
+              resultsRef.push({
                 score: score,
                 timestamp: new Date().toISOString()
               });
-              localStorage.setItem('quizResults', JSON.stringify(results));
             }
 
           </script>
