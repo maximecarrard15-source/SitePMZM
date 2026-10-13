@@ -226,7 +226,7 @@
 .detail-page.red-page .hat-example-title,
 .detail-page.red-page .hat-example-title::before,
 .detail-page.red-page .logo-circle img {
-  color: var(--red);
+  color: #FF0000;
   filter: drop-shadow(0 0 30px rgba(255, 94, 82, 0.3));
 }
 
